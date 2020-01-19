@@ -8,18 +8,18 @@ exports.run = async (client, message, args) => {
   let cisim = args.slice(0).join(' ');
   let eksilcek = -100
 
-  let pideMiktar = 1
-  let pidepara = 100
+  let kodMiktar = 1
+  let kodpara = -100
  
-    if (para < pidepara) {
-      message.channel.send('Pide alabilmek için yeterli paran görünmüyor.')
-  } else if (para > pidepara) {
+    if (para < kodpara) {
+      message.channel.send('kod alabilmek için yeterli paran görünmüyor.')
+  } else if (para > kodpara) {
     
   
     db.add(`kredi-sistemi.DumPSkod_${message.member.id}`, eksilcek)
-    db.add(`kredi-sistemi.DumPSkod-satınalınan_${message.member.id}`, pideMiktar)
+    db.add(`kredi-sistemi.DumPSkod-satınalınan_${message.member.id}`, kodMiktar)
   
-    return message.channel.send(`Başarıyla marketten pide aldınız.`)
+    return message.channel.send(`Başarıyla marketten kod aldınız.(DumPS#9337 yi ekleyip isteyin en fazla 3 kod alırsınız)`)
   
 }
 }
@@ -32,6 +32,6 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'pide-al',
-  açıklama: 'pide alır',
+  name: 'kodal',
+  açıklama: 'kod alır',
 };
