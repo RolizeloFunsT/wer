@@ -23,7 +23,7 @@ exports.conf = {
   permLevel: 4
 };
 exports.help = {
-  name: 'sunucular',
+  name: 'sunuculistesi',
   description: 'sunuculistesi',
   usage: 'sunuculistesi'
 };
