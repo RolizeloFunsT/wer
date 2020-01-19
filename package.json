@@ -22,7 +22,9 @@
     "discord.js-commando": "^0.10.0",
     "random-puppy": "^1.1.0",
     "google-tts-api": "^0.0.4",
-    "math-expression-evaluator": "^1.2.17"
+    "math-expression-evaluator": "^1.2.17",
+    "superagent": "^5.2.1",
+    "node-google-translate-skidz": "^1.1.2"
   },
   "engines": {
     "node": "10.x"
