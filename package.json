@@ -28,7 +28,8 @@
     "simple-youtube-api": "^5.2.1",
     "ytdl-core": "^1.0.7",
     "common-tags": "^1.8.0",
-    "snekfetch": "^4.0.4"
+    "snekfetch": "^4.0.4",
+    "parse-ms": "^2.0.0"
   },
   "engines": {
     "node": "10.x"
