@@ -1,6 +1,7 @@
 dependencies:
   chalk: 3.0.0
   colors: 1.4.0
+  common-tags: 1.8.0
   discord.js: 11.5.1
   discord.js-commando: 0.10.0
   express: 4.17.1
@@ -13,6 +14,7 @@ dependencies:
   quick.db: 6.3.2
   random-puppy: 1.1.0
   simple-youtube-api: 5.2.1
+  snekfetch: 4.0.4
   steam-provider: 0.2.0
   superagent: 5.2.1
   ytdl-core: 1.0.7
@@ -1320,6 +1322,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NjxjITIj04Ffqid5lqr7XdgwM7X61c/Dns073Ly170bPQHLm6jkmelye/eglS++1nfTWktpP6Y2bFXjdPlQqdw==
+  /snekfetch/4.0.4:
+    deprecated: use node-fetch instead
+    dev: false
+    resolution:
+      integrity: sha512-dyycG9fvwtSJqKPfMVOpXt+60qvMGe7vWLwOJDiSJaiAx+hs2EnFChG2bXCWn7ulz+zGzrHdN9/yeEb0YqEPww==
   /socket.io-adapter/1.1.2:
     dev: false
     resolution:
@@ -1621,6 +1628,7 @@ shrinkwrapVersion: 3
 specifiers:
   chalk: ^3.0.0
   colors: ^1.4.0
+  common-tags: ^1.8.0
   discord.js: ^11.5.1
   discord.js-commando: ^0.10.0
   express: ^4.17.1
@@ -1633,6 +1641,7 @@ specifiers:
   quick.db: ^6.3.2
   random-puppy: ^1.1.0
   simple-youtube-api: ^5.2.1
+  snekfetch: ^4.0.4
   steam-provider: ^0.2.0
   superagent: ^5.2.1
   ytdl-core: ^1.0.7
