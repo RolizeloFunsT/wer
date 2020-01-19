@@ -32,7 +32,8 @@
     "parse-ms": "^2.0.0",
     "cleverbot.io": "^1.0.4",
     "node-superfetch": "^0.1.9",
-    "canvas": "^2.6.1"
+    "canvas": "^2.6.1",
+    "jimp": "^0.9.3"
   },
   "engines": {
     "node": "10.x"
