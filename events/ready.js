@@ -7,7 +7,9 @@ var prefix = ayarlar.prefix;
 
 module.exports = client => {
 var oyun = [
-        "https://discord.gg/eKMvs6g  gelerek bizi destekleyebilirsiniz"
+
+        "!!müzik yazarak yeni gelen eklentimize bakabilirsiniz iyi eglenceler." 
+
     ];
 
     setInterval(function() {
