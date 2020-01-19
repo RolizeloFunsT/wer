@@ -1,5 +1,6 @@
 dependencies:
   chalk: 3.0.0
+  cleverbot.io: 1.0.4
   colors: 1.4.0
   common-tags: 1.8.0
   discord.js: 11.5.1
@@ -208,6 +209,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-0td5ijfUPuubwLUu0OBoe98gZj8C/AA+RW3v67GPlGOrvxWjZmBXiBCRU+I8VEiNyJzjth40POfHiz2RB3gImA==
+  /cleverbot.io/1.0.4:
+    dependencies:
+      request: 2.88.0
+    dev: false
+    resolution:
+      integrity: sha1-gGSGLLHwm/eXfRO0tnsLkOgvQK8=
   /color-convert/2.0.1:
     dependencies:
       color-name: 1.1.4
@@ -1634,6 +1641,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   chalk: ^3.0.0
+  cleverbot.io: ^1.0.4
   colors: ^1.4.0
   common-tags: ^1.8.0
   discord.js: ^11.5.1
