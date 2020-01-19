@@ -30,7 +30,9 @@
     "common-tags": "^1.8.0",
     "snekfetch": "^4.0.4",
     "parse-ms": "^2.0.0",
-    "cleverbot.io": "^1.0.4"
+    "cleverbot.io": "^1.0.4",
+    "node-superfetch": "^0.1.9",
+    "canvas": "^2.6.1"
   },
   "engines": {
     "node": "10.x"
