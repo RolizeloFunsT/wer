@@ -74,7 +74,6 @@ module.exports.run = async (bot, message, args) => {
       
       
     })})})})})})})})
-  //  message.guild.members.get(message.guild.owner).addRole(message.guild.roles.find("name", "👑 | Kurucu"))
     
      message.guild.createChannel(`Önemli Kanallar`, "Category").then(duyurukategorisi => {
      message.guild.createChannel(`Yazı Kanalları`, "Category").then(sohbetkategori => {
