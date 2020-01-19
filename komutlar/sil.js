@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 
 exports.run = function(client, message, args) {
-//Komutun Kodları
+
   const m = args.join(' ');
   if(!m) return message.channel.send('**:gear: Bir miktar girmelisiniz!**');
   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('**:xx: Bu işlem için gerekli izne sahip değilsiniz!**');
@@ -23,15 +23,15 @@ exports.run = function(client, message, args) {
 };
 
 exports.conf = {
-  enabled: true,//True => Komut açık, False => Komut kapalı 
-  guildOnly: false, //True => Sadece Servere Özel, False => Heryerde kullanılabilir
-  aliases: ['temizle','delete','sil'],//Komutun farklı kullanımları ÖR: !ping, !p
-  permLevel: 0 //kimlerin kullanabileceğini  (bot.js dosyasında perm leveller yazıyor)
+  enabled: true,
+  guildOnly: false,
+  aliases: ['temizle','delete','sil'],
+  permLevel: 0
 };
 
 exports.help = {
-  name: 'sil',//Komutun adı (Komutu girerken lazım olucak)
-  description: 'Belirlediğiniz miktarda mesaj siler',//Komutun Açıklaması
+  name: 'sil',
+  description: 'Belirlediğiniz miktarda mesaj siler',
   category:'yetkili',
-  usage: 'sil 100' //komutun kullanım şekli; ÖR: !ban @Kullanıcı
+  usage: 'sil 100'
 }
