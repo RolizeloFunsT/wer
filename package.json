@@ -20,7 +20,8 @@
     "steam-provider": "^0.2.0",
     "g-image-search": "^1.0.2",
     "discord.js-commando": "^0.10.0",
-    "random-puppy": "^1.1.0"
+    "random-puppy": "^1.1.0",
+    "google-tts-api": "^0.0.4"
   },
   "engines": {
     "node": "10.x"
