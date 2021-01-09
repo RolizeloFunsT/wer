@@ -8,7 +8,7 @@ var prefix = ayarlar.prefix;
 module.exports = client => {
 var oyun = [
 
-        "!!müzik yazarak yeni gelen eklentimize bakabilirsiniz iyi eglenceler." 
+        "" 
 
     ];
 
