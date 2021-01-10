@@ -1,43 +1,28 @@
-const discord = require('discord.js')
+  
+const Discord = require('discord.js');
 
-exports.run = async (client, message, args) => {
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-    const embed = new discord.RichEmbed()
-    .setAuthor(message.author.username)
-    .setColor('RED')
-    .setDescription("Bu komutu kullanabilmek için `Mesajları Yönet` yetkisine sahip olmanız gerek.")
-    message.channel.send(embed)
-  } else {
-   
-  if (args.length < 1) {
-    const embed = new discord.RichEmbed()
-    .setAuthor(message.author.username)
-    .setColor('RED')
-    .setDescription("Doğru kullanım !duyuru <yazı>")
-    message.channel.send(embed)
-  }
-   
-  const embedd = new discord.RichEmbed()
-  .setAuthor('📢  Yeni Bir Duyuru var  \n  Duyuru:')
-  .setColor('BLUE')
-  .setDescription(args.join(' ').split('').join(''))
-  message.channel.send(embedd);
-  message.delete();
-    
-    
-  }
-    
+exports.run = (client, message, args) => {
+	let guild = message.guild
+	let duyurular = guild.channels.find('name', 'duyurular');
+	if (!duyurular) return message.reply('`duyurular` kanalını bulamıyorum.');
+    let mesaj = args.slice(0).join(' ');
+    if (mesaj.length < 1) return message.reply('Bir şey yazmadınız.');
+    message.delete();
+    const embed = new Discord.RichEmbed()
+    .setColor(0xD97634)
+    .setDescription(`:anchor: **Tüm Herkese Duyurulur ;**\n${mesaj}`)
+    return guild.channels.get(duyurular.id).sendEmbed(embed);
 };
 
 exports.conf = {
-  aliases: [ 'duyuru' ],
   enabled: true,
   guildOnly: false,
+  aliases: ['duyuru', 'duyuruyap'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'duyuru',
-  category: 'Kullanıcı',
-  usage: 'duyuru <yazı>'
+  name: 'duyuruyap',
+  description: 'Sunucuda Duyuru yapmanızı sağlar.',
+  usage: 'duyuruyap [yazı]'
 };

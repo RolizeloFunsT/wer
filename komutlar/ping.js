@@ -1,25 +1,41 @@
-  
 const Discord = require('discord.js');
-const client = new Discord.Client();
+exports.run = async (app, message, client) => {
+  
+  const kinda = new Discord.MessageEmbed()
 
-exports.run = (client, message) => {
-  if (message.channel.type !== 'dm') {
-    const ozelmesajkontrol = new Discord.RichEmbed()
-    .setColor(0xD97634)
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Buyur kardeşim : **' + client.ping + '** gayet hızlı ttnet kullanıyorsan cin çarpsın <a:emoji_11:654361772404375553>');
-    message.channel.sendEmbed(ozelmesajkontrol) }
+  .setColor("RED")
+  .setDescription('Ping Hesaplanıyor...')
+  
+   let start = Date.now(); 
+   let mesaj = await message.channel.send(kinda)
+   let diff = (Date.now() - start); 
+   let API = (app.ws.ping).toFixed(2)
+    
+    setInterval(() => {
+  
+   const only = new Discord.MessageEmbed()
+  
+   .setDescription(`\nMesaj Gecikme Süresi ; **${diff}Ms** \n\nBot Gecikme Süresi ; **${API}Ms**`)
+   .setColor('GREEN')
+   
+    mesaj.edit(only);
+   
+    }, 5000)
+  
+
+ 
+ 
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['p'],
+  aliases: ['ms'],
   permLevel: 0
 };
 
 exports.help = {
   name: 'ping',
-  description: 'Pingi gösterir.',
+  description: 'Skorsky',
   usage: 'ping'
 };

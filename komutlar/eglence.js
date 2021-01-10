@@ -1,43 +1,52 @@
-const Discord = require("discord.js");
-const moment = require("moment");
-const colors = require("colors");
-var green = process.env.NODE_DISABLE_COLORS ? '' : '\x1b[32m';
+const Discord = require ("discord.js");
 
-require("moment-duration-format");
+exports.run = (client, message) => {
 
-exports.run = (client, msg) => {
-  const duration = moment.duration(client.uptime).format(" D [gün], H [saat], m [dakika], s [saniye]");
-  msg.channel.sendCode("asciidoc", `⇝ Eglence komutlar | Not:Komutlar !! ile başlar
-        • Eglence Komutlari		
-• Arkadasin :: Arkadasini Bilir.
-• Atatürk	  :: Atatürk ile ilgili mesaj verir.	
-• kaçcm    :: Kac Cm Oldunu Yazar.
-• sins-aga     :: Dene Gor :D
-• mcödül    :: Istediniz Yaziyi Minecraft Basarisina Dondurur.
-• hayvan    :: Lan Dene Iste Gor Ben nie solim surda 2 saatdir yaziyorum
-• avatar    :: istediğiniz kullanıcının avatarını gösterir
-• say       :: Sunucudaki üye sayısını gösterir
-• istatistik :: istatistigini gösterir.
-• slots :: Slots oyunu oynatır
-• çekiliş :: sunucuda çekiliş yapar.
-• vur :: vurursun :D
-• sor :: rasgele evet hayır belki diye cevap verir.
-• hackle :: birisini hackler
-• fakemesaj :: fake mesaj atar
-• hesapla :: bir matematik sorusu cevaplar.
-• atasözü :: rasgele atasözü atar
-    Sayfa 1 / 1 | Yapımcım: DumPS#9337`);
+const EmbedFwhyCode = new Discord.MessageEmbed()
+
+.setColor("RANDOM")
+.setTitle("** ©️ **Roliz Bot ** ©️ **  \n\n> :floppy_disk: `!istatistik` **Botun istatistik bilgilerini açar.** \n> :floppy_disk: **Şuanda kullanılan prefix** `!`")
+.setThumbnail("https://cdn.discordapp.com/attachments/783331666223562787/796050603762778172/roliz.gif")
+.setDescription(`
+
+:closed_lock_with_key: **Eğlence Komutları** :closed_lock_with_key:
+
+> **» !aduketçek :** Etiketlediğiniz kişiye aduket çekersiniz.
+> **» !balık-tut :** Denizde balık tutarsınız.
+> **» !beşlik :** Etiketlediğiniz kişiyle beşlik çakarsınız.
+> **» !ara155 :** Polisi aramanıza yarar.
+> **» !efkarım :** Şu anda olan efkarınızı ölçersiniz.
+> **» !ejderha-yazı :** Ejderha temalı logo üretirsiniz.
+> **» !espri :** Bot sizin için espri yapar.
+> **» !kartopu :** Etiketlediğiniz kişiye kartopu atarsınız.
+> **» !kralol :** Kral olmanıza yarar.
+> **» !tokat :** Etiketlediğiniz kişiyi tokatlarsınız.
+> **» !yılbaşı :** Yılbaşının gelmesine ne kadar yaklaştığınızı gösterir.
+> **» !kuş-dili-çevirici :** Yazdığınız şeyi kuş diline çevirir.
+
+
+
+** :gear: **Bilgilendirme** :gear: **
+
+`)
+
+.setImage("https://cdn.discordapp.com/attachments/783331666223562787/796053557240660028/rolizbanner.gif")
+.setFooter(client.user.username + "", client.user.avatarURL)
+.setTimestamp();
+
+return message.channel.send(EmbedFwhyCode)
+.then; //FwhyCode
+
 };
-
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
+    enabled: true, 
+    guildOnly: false, 
+    aliases: [], 
+    permLevel: 0 
 };
-
-exports.help = {
-  name: 'eglence',
-  description: 'Tüm komutları listeler. İsterseniz bir komut hakkında yardım eder..',
-  usage: 'eglence'
+  
+  exports.help = {
+    name: 'eğlence', 
+    description: 'The Help Command',
+    usage: 'fun'
 };

@@ -16,8 +16,7 @@ module.exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ["üyedurum","üyeler","durumlar","durum"],
-  permLevel: 0,
-kategori: 'sunucu'
+  permLevel: 0
 };
 
 module.exports.help = {

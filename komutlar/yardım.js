@@ -1,30 +1,43 @@
-const Discord = require('discord.js');
+const Discord = require ("discord.js");
+
+exports.run = (client, message) => {
+
+const EmbedFwhyCode = new Discord.MessageEmbed()
+
+.setColor("RANDOM")
+.setTitle("** ©️ **Roliz Bot  ©️ **  \n\n> :floppy_disk: `!istatistik` **Botun istatistik bilgilerini açar.** \n> :floppy_disk: **Şuanda kullanılan prefix** `!`")
+.setThumbnail('https://cdn.discordapp.com/attachments/783331666223562787/796050603762778172/roliz.gif')
+.setDescription(`
+
+ :closed_lock_with_key: **Bot Komutlarıı** :closed_lock_with_key: 
+
+> **» !eğlence :** Eğlence Komutlarını Görürsünüz.
+> **» !moderasyon :** Moderasyon Komutlarını Görürsünüz.
+> **» !logo :** Logo Komutlarını Görürsünüz.
+> **» !medya** Bot İle İlgili Bağlantılar.
 
 
+** :gear: **Bilgilendirme** :gear: **
+Bu komut ${message.author.username} tarafından istendi! 
 
-exports.run = async (client, message, params, args) => {
+`)
+ .setImage("https://cdn.discordapp.com/attachments/783331666223562787/796053557240660028/rolizbanner.gif")
+.setFooter(client.user.username + "", client.user.avatarURL)
+.setTimestamp();
 
-  const yardım = new Discord.RichEmbed()
-  .setColor(0x36393e)
-      .setAuthor('Kategoriler Yapımcı : By DumPS')
-      .addField(`Leroux Komut Menüsü`, `**Komutlar** \n  \n **| !!eglence |** yazarak eglence komutlarına ulaşa bilirsiniz. \n **| !!yetkili |** yetkili komutlarını görürsünüz. \n **| !!moderasyon |** !!moderasyon yazarak moderasyon komutlarına erişebilirsiniz. \n **| !!müzik |** !!müzik yazarak müzik komutlarına erişebilirsiniz.  `)
-    .setFooter(`${message.author.username} tarafından istendi.`, message.author.avatarURL)
-  return message.channel.sendEmbed(yardım);
+return message.channel.send(EmbedFwhyCode)
+.then;
 
 };
-
-
-
-  
 exports.conf = {
-    enabled: true,
-    guildOnly: false,
-    aliases: ['komut', 'komutlar', 'command', 'yardım', 'help', 'halp', 'y', 'h', 'commands'],
-    permLevel: 0
-  };
+    enabled: true, 
+    guildOnly: false, 
+    aliases: [], 
+    permLevel: 0 
+};
   
   exports.help = {
-    name: 'yardım',
-    description: 'yardım',
+    name: 'yardım', 
+    description: 'The Help Command',
     usage: 'yardım'
-  };
+};

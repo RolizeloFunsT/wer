@@ -1,37 +1,63 @@
-const Discord = require("discord.js");
-const moment = require("moment");
-const colors = require("colors");
-var green = process.env.NODE_DISABLE_COLORS ? '' : '\x1b[32m';
+const Discord = require ("discord.js");
 
-require("moment-duration-format");
+exports.run = (client, message) => {
 
-exports.run = (client, msg) => {
-  const duration = moment.duration(client.uptime).format(" D [gün], H [saat], m [dakika], s [saniye]");
-  msg.channel.sendCode("asciidoc", `⇝ moderasyon komutlar | Not:Komutlar !! ile başlar
-        • Moderasyon Komutlari		
-• istatistik :: istatistigini gösterir.
-• talep :: Destek talebi açar.
-• eval :: kod denersiniz.
-• yapimcim :: yapimcimi gösterir.
-• reklam-taraması :: reklam taraması yapar oynuyor ve kullanıcı adında.
-• komutlar :: bot daki tüm komutları gösterir.
-• üyedurum :: Üye Durumlarını ve sunucudaki üye sayısını gösterir.
-• saat :: türkiyenin saatini gösterir.
-• rolliste :: roldeki kişileri gösterir.
-• steamfiyat :: steadeki oyun fiyatlarını gösterir.
-• çevir :: butun dilleri turkceden o dil e cevirir örnek : !!çevir en merhaba
-    Sayfa 1 / 1 | Yapımcım: DumPS#9337`);
+const EmbedFwhyCode = new Discord.MessageEmbed()
+
+.setColor("RANDOM")
+.setTitle("** ©️ **Roliz Bot (V12)** ©️ **]  \n\n> :floppy_disk: `!istatistik` **Botun istatistik bilgilerini açar.** \n> :floppy_disk: **Şuanda kullanılan prefix** `!`")
+.setThumbnail('https://cdn.discordapp.com/attachments/783331666223562787/796050603762778172/roliz.gif')
+.setDescription(`
+
+ :closed_lock_with_key: **Moderasyon Komutları** :closed_lock_with_key: 
+
+> **» !duyuru** *BAKIMDA*
+> **» !çekiliş** *BAKIMDA*
+> **» !bot-bilgi**
+> **» !ever-here-engel**
+> **» !isim-değiştir**
+> **» !kullanıcı-bilgi**
+> **» !küfür-engel**
+> **» !link-kısalt** *BAKIMDA*
+> **» !modlog**
+> **» !otorol** *BAKIMDA*
+> **» !ping**
+> **» !prefix**
+> **» !reklam-engel**
+> **» !rol-al** *BAKIMDA*
+> **» !rol-ver** *BAKIMDA*
+> **» !rol-bilgi** *BAKIMDA*
+> **» !sa-as**
+> **» !sayaç-ayarla** *BAKIMDA*
+> **» !sayaç-kanal-ayarla** *BAKIMDA*
+> **» !sunucu-bilgi**
+> **» !sunucu-kur**
+> **» !temizle**
+> **» !üye-durum** *BAKIMDA*
+> **» !yavaş-mod**
+
+** :gear: **Bilgilendirme** :gear: **
+Bu komut ${message.author.username} tarafından istendi! 
+
+`)
+
+.setImage("https://cdn.discordapp.com/attachments/783331666223562787/796053557240660028/rolizbanner.gif")
+.setFooter(client.user.username + "", client.user.avatarURL)
+.setTimestamp();
+
+return message.channel.send(EmbedFwhyCode)
+.then;
+
 };
-
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
+    enabled: true, 
+    guildOnly: false, 
+    aliases: [], 
+    permLevel: 0 
 };
-
-exports.help = {
-  name: 'moderasyon',
-  description: 'moderasyon',
-  usage: 'moderasyon'
+  
+  exports.help = {
+    name: 'moderasyon', 
+    description: 'The Help Command',
+    usage: 'moderasyon'
 };
