@@ -119,7 +119,7 @@ client.elevation = message => {
   return permlvl;
 };
 //
-client.login(ayarlar.token);
+client.login(process.env.token);
 //
 //-------------------- Küfür Engel --------------------//
 //-------------------- Küfür Engel --------------------//
